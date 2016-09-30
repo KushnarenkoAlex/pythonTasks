@@ -3,18 +3,18 @@
 '''
 from sys import stdout
 
-def printMatrix(m):
+def print_matrix(m):
     for a in range(len(m)):
         for b in range(len(m[a])):
             stdout.write(str(m[a][b])+" ")
         stdout.write("\n")
         stdout.flush()
 
-def getSubMatrix(m,x,y):
-    newMatrix=[]
+def sub_matrix(m,x,y):
+    new_matrix=[]
     for a in range(len(m)-x):
         temp=[]
         for b in range(len(m[a])-y):
             temp.append(m[a+x][b+y])
-        newMatrix.append(temp)
-    return newMatrix
+        new_matrix.append(temp)
+    return new_matrix
