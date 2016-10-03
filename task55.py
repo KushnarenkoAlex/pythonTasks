@@ -1,7 +1,6 @@
 '''Матрица состоит из нулей и единиц. Найдите в ней самую
 длинную цепочку подряд идущих нулей по горизонтали, вертикали или диагонали.
 '''
-from sys import stdout
 from matrixUtil import *
 
 def find_longest_line_in_matrix(matrix):
@@ -12,7 +11,7 @@ def find_longest_line_in_matrix(matrix):
             if(max(max_len,idx+1,idy+1)==max_len):
                 return max_len
             if(val2==0):
-                tempLen=find_longest_line_in_matrix_from_begin(sub_matrix(matrix,idx,idy))
+                tempLen=find_longest_line_in_matrix_from_begin(sub_matrix_from_point_to_end(matrix,idx,idy))
                 max_len=max(max_len,tempLen)
     return max_len
 
