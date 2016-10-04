@@ -7,7 +7,7 @@
 def create_expression(number,div,plus):
     result=""
     count=0
-    while number!=1 or number<=0:
+    while number>1:
         var=""
         if number % div == 0:
             number=number/div
@@ -18,4 +18,4 @@ def create_expression(number,div,plus):
         count+=1
         result=var+")"+result
     res=''.join(['(' for s in range(count)])
-    return res+"1"+result
+    return res+str(number)+result
